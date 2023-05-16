@@ -4,9 +4,9 @@ import { FC } from "react";
 
 interface pageProps {}
 
-const page: FC<pageProps> = ({}) => {
+const Client: FC<pageProps> = ({}) => {
   const { data } = useSession();
   return <pre>{JSON.stringify(data)}</pre>;
 };
 
-export default page;
+export default Client;

@@ -21,9 +21,9 @@ export default async function Home() {
         <span className="py-2 px-4 font-medium rounded-md bg-purple-500 text-white inline-block mx-2">
           <SignInBtn provider="github"/>
         </span>
-        <span className="py-2 px-4 font-medium rounded-md bg-sky-500 text-white inline-block mx-2">
+        {/* <span className="py-2 px-4 font-medium rounded-md bg-sky-500 text-white inline-block mx-2">
           <SignInBtn provider="twitter"/>
-        </span>
+        </span> */}
       </main>
     </>
   );

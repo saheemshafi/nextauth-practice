@@ -22,7 +22,7 @@ export const authOptions: AuthOptions = {
     TwitterProvider({
       clientId: process.env.TWITTER_ID as string,
       clientSecret: process.env.TWITTER_SECRET as string,
-      version:'2.0'
+      version: "2.0",
     }),
   ],
   secret: process.env.JWT_SECRET,

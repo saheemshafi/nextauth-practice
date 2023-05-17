@@ -9,9 +9,11 @@ export default async function Home() {
   const session = await getServerSession(authOptions);
   return (
     <>
-      <pre>{JSON.stringify(session)}</pre>
-      <Link href={"/client"}>Go to client component</Link>
-      <main className="p-24 grid grid-cols-2 auto-rows-auto gap-3">
+      <pre className="whitespace-pre-wrap break-words bg-gray-800 p-5">
+        {JSON.stringify(session?.user)}
+      </pre>
+      <Link className="font-semibold text-sky-500 hover:text-sky-400 visited:text-blue-400 underline decoration-wavy inline-block m-3" href={"/client"}>Go to client component</Link>
+      <main className="p-4 sm:p-24 grid sm:grid-cols-2 auto-rows-auto gap-3">
         <span className="hover:ring-4 hover:ring-rose-500/40 py-3 px-4 font-medium rounded-md bg-rose-500 text-white flex space-x-2 mx-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"

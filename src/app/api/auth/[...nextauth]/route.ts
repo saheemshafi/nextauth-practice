@@ -4,6 +4,7 @@ import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 import FacebookProvider from "next-auth/providers/facebook";
 import TwitterProvider from "next-auth/providers/twitter";
+import SpotifyProvider from "next-auth/providers/spotify";
 
 export const authOptions: AuthOptions = {
   providers: [
@@ -23,6 +24,10 @@ export const authOptions: AuthOptions = {
       clientId: process.env.TWITTER_ID as string,
       clientSecret: process.env.TWITTER_SECRET as string,
       version: "2.0",
+    }),
+    SpotifyProvider({
+      clientId: process.env.SPOTIFY_ID as string,
+      clientSecret: process.env.SPOTIFY_SECRET as string,
     }),
   ],
   secret: process.env.JWT_SECRET,
